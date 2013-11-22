@@ -1,34 +1,61 @@
 var stage = new Kinetic.Stage({
   container: 'game',
   width: 600,
-  height: 400,
+  height: 500,
 });
 
 var layer = new Kinetic.Layer();
 
-var rect = new Kinetic.Rect({
+var rectA = new Kinetic.Rect({
   x: 10,
-  y: 120,
+  y: 150,
   width: 15,
-  height: 150,
-  fill: 'red',
-  stroke: 'black',
+  height: 100,
+  fill: 'white',
   strokeWidth: 4
 });
 
-layer.add(rect);
+
+var rectB = new Kinetic.Rect({
+  x: 570,
+  y: 150,
+  width: 15,
+  height: 100,
+  fill: 'white',
+  strokeWidth: 4
+});
+
+layer.add(rectA);
+layer.add(rectB);
+
 stage.add(layer);
 
-window.addEventListener('keydown', function(e) {
-    var old_x = rect.attrs.x;
-    var old_y = rect.attrs.y;
- //   if (e.keyCode == 37) //Left Arrow Key
-//        rect.setAttrs({x:old_x-10});
-    if (e.keyCode == 38) //Up Arrow Key
-        rect.setAttrs({y:old_y-15});
-//    if (e.keyCode == 39) //Right Arrow Key
-//        rect.setAttrs({x:old_x+10});
-    if (e.keyCode == 40) //Top Arrow Key
-        rect.setAttrs({y:old_y+15});
+
+function shapeMoveByKeyboard(e, shape) {
+
+    var old_y = shape.attrs.y;
+    switch(e.keyCode) {
+        case 38:
+            // Up Arrow Key
+            shape.setAttrs({y:old_y-10});
+            break;
+        case 40:
+            // Top Arrow key
+            shape.setAttrs({y:old_y+10});
+            break;
+        case 37:
+            // Left Arrow Key
+            break; 
+        case 39:
+            // Right Arrow Key
+            break;
+        default:
+            break;
+    }
+}
+
+window.addEventListener('keydown', function(e) {    
+    shapeMoveByKeyboard(e, rectA);
+    shapeMoveByKeyboard(e, rectB);
     layer.draw();
 });

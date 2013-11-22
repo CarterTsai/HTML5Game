@@ -50,6 +50,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
+    background-color: #000;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -88,4 +89,7 @@ body {
     .jumbotron {
         border-bottom: 0;
     }
+}
+.game {
+    background-color: #000;
 }
