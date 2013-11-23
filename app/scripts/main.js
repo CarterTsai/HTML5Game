@@ -26,7 +26,7 @@ var rectB = new Kinetic.Rect({
 });
 
 var ball = new Kinetic.Circle({
-    x: 300,
+    x: 290,
     y: 250,
     radius: 7,
     fill: 'white',

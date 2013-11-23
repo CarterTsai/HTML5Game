@@ -60,6 +60,22 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
+.jumbotron > .score {
+    color: white;
+    font-size: 40px;
+    left: 10px;
+}
+
+.jumbotron > .score > span {
+    display: inline-block;
+    width: 100px;
+}
+
+.jumbotron > .line {
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
 .jumbotron .btn {
     font-size: 21px;
     padding: 14px 24px;
