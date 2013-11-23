@@ -8,7 +8,7 @@ var layer = new Kinetic.Layer();
 
 var rectA = new Kinetic.Rect({
     x: 10,
-    y: stage.getHeight() / 2,
+    y: 200,
     width: 15,
     height: 100,
     fill: 'white',
@@ -18,7 +18,7 @@ var rectA = new Kinetic.Rect({
 
 var rectB = new Kinetic.Rect({
     x: 570,
-    y: 150,
+    y: 200,
     width: 15,
     height: 100,
     fill: 'white',
@@ -26,8 +26,8 @@ var rectB = new Kinetic.Rect({
 });
 
 var ball = new Kinetic.Circle({
-    x: stage.getWidth() / 2,
-    y: stage.getHeight() / 2,
+    x: 300,
+    y: 250,
     radius: 7,
     fill: 'white',
     stroke: 'white',
