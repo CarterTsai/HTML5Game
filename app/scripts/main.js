@@ -1,9 +1,12 @@
+(function() {
+
 var stage = new Kinetic.Stage({
   container: 'game',
   width: 600,
-  height: 500,
+  height: 500
 });
 
+console.log(stage.attrs.width)
 var layer = new Kinetic.Layer();
 
 var rectA = new Kinetic.Rect({
@@ -42,6 +45,10 @@ layer.add(ball);
 
 stage.add(layer);
 
+var EnvLimit = {
+    top: 0, 
+    bottom : stage.attrs.height - rectA.attrs.height
+}
 
 function shapeMoveByKeyboard(e, shape) {
 
@@ -49,11 +56,15 @@ function shapeMoveByKeyboard(e, shape) {
     switch(e.keyCode) {
         case 38:
             // Up Arrow Key
-            shape.setAttrs({y:old_y-10});
+            if (shape.attrs.y > EnvLimit.top)
+                shape.setAttrs({y:old_y-10});
+            console.log(shape.attrs.y)
             break;
         case 40:
             // Top Arrow key
-            shape.setAttrs({y:old_y+10});
+            if (shape.attrs.y < EnvLimit.bottom )
+                shape.setAttrs({y:old_y+10});
+            console.log(shape.attrs.y)
             break;
         case 37:
             // Left Arrow Key
@@ -71,3 +82,5 @@ window.addEventListener('keydown', function(e) {
     shapeMoveByKeyboard(e, rectB);
     layer.draw();
 });
+
+})();
