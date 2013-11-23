@@ -7,26 +7,38 @@ var stage = new Kinetic.Stage({
 var layer = new Kinetic.Layer();
 
 var rectA = new Kinetic.Rect({
-  x: 10,
-  y: 150,
-  width: 15,
-  height: 100,
-  fill: 'white',
-  strokeWidth: 4
+    x: 10,
+    y: stage.getHeight() / 2,
+    width: 15,
+    height: 100,
+    fill: 'white',
+    strokeWidth: 4
 });
 
 
 var rectB = new Kinetic.Rect({
-  x: 570,
-  y: 150,
-  width: 15,
-  height: 100,
-  fill: 'white',
-  strokeWidth: 4
+    x: 570,
+    y: 150,
+    width: 15,
+    height: 100,
+    fill: 'white',
+    strokeWidth: 4
 });
+
+var ball = new Kinetic.Circle({
+    x: stage.getWidth() / 2,
+    y: stage.getHeight() / 2,
+    radius: 7,
+    fill: 'white',
+    stroke: 'white',
+    strokeWidth: 4
+});
+
 
 layer.add(rectA);
 layer.add(rectB);
+layer.add(ball);
+
 
 stage.add(layer);
 
