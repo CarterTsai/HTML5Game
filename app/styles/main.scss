@@ -9,10 +9,16 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
     padding: 0.2em 0;
 }
 
+@font-face {
+    font-family: ebit;
+    src: url('/font/8-BIT.TTF');
+}
+
 /* Space out content a bit */
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family: ebit;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
