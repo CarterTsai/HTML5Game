@@ -77,6 +77,17 @@ function shapeMoveByKeyboard(e, shape) {
     }
 }
 
+
+/*  1. Handle the position is change, emit position to other player
+ *     via socket.io
+ *  2. When other player change position, that will be fired to render
+ *     
+ */
+ 
+function Dispatcher (gameInfo) {
+    
+}
+
 window.addEventListener('keydown', function(e) {    
     shapeMoveByKeyboard(e, rectA);
     shapeMoveByKeyboard(e, rectB);
