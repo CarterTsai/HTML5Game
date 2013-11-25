@@ -2,6 +2,7 @@
   "name": "html5game",
   "version": "0.0.0",
   "dependencies": {
+    "semantic": "~0.9.5",
     "sass-bootstrap": "~3.0.0",
     "modernizr": "~2.6.2",
     "jquery": "~1.10.2",
