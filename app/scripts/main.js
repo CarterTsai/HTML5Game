@@ -83,9 +83,32 @@ function shapeMoveByKeyboard(e, shape) {
  *  2. When other player change position, that will be fired to render
  *     
  */
- 
-function Dispatcher (gameInfo) {
-    
+
+var GameInfo = {
+    score:{p1:0, p2:0},
+    player1:{
+        y:0
+    },
+    player2:{
+        y:0
+    },
+    ball: {
+        x: 0,
+        y: 0
+    }
+}
+
+function Dispatcher (eventType ,gameInfo) {
+    switch(eventType) {
+        case 'Emitted':
+            // code
+            break; 
+        case 'Received':
+            // code
+            break;
+        default:
+            // code
+    }
 }
 
 window.addEventListener('keydown', function(e) {    
